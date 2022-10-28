@@ -1,10 +1,14 @@
 <script>
+  // dependencies
   import Arweave from "arweave";
   import { ArweaveWebWallet } from "arweave-wallet-connector";
   const { SmartWeaveWebFactory } = rsdk;
-
+  // initialization
   const arweave = Arweave.init({});
-  const wallet = new ArweaveWebWallet({ name: "Hello" });
+  const wallet = new ArweaveWebWallet({
+    name: "Hello",
+    logo: "https://jfbeats.github.io/ArweaveWalletConnector/placeholder.svg",
+  });
   wallet.setUrl("arweave.app");
   const smartweave = SmartWeaveWebFactory.memCached(arweave);
 
@@ -26,6 +30,7 @@
     visits = getVisits();
   }
 
+  // load visits
   let visits = getVisits();
 </script>
 

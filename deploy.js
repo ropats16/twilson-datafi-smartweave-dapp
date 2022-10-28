@@ -9,7 +9,7 @@ const arweave = Arweave.init({
   protocol: 'https'
 })
 const w = JSON.parse(fs.readFileSync('wallet.json', 'utf-8'))
-/*
+
 const source = fs.readFileSync('contract.js', 'utf-8')
 
 const tx = await arweave.createTransaction({ data: source })
@@ -22,13 +22,14 @@ await arweave.transactions.sign(tx, w)
 await arweave.transactions.post(tx)
 
 console.log('contract source', tx.id)
-*/
+
 // permaweb index.html
 // permaweb assets/index.....js
 
 // deploy contract with path.manifest 
-const CONTRACT_SRC = 'N2oVt_uOMhnrCzTMWSZ0lMmgtqegEKoJ_pi7yDOJCkQ'
-const js = '666268d5'
+// const CONTRACT_SRC_TWILSON = 'N2oVt_uOMhnrCzTMWSZ0lMmgtqegEKoJ_pi7yDOJCkQ'\
+// const CONTRACT_SRC = 'G7bmO9mg-9ZwXPCkjNR5afvD0UcBLxlN6GgMiXa060Q'
+// const js = '666268d5'
 /*
 const bundlr = new Bundlr.default("http://node2.bundlr.network", "arweave", w);
 
@@ -96,6 +97,8 @@ const app = JSON.stringify({
   }
 })
 */
+
+/*
 const app = '{"manifest":"arweave/paths","version":"0.1.0","index":{"path":"index.html"},"paths":{"index.html":{"id":"AaVpAH1gVzCSCj0mPGwqtXY3bQHE97b8LVx4SFpV1TU"},"assets/index.666268d5.js":{"id":"P9szTE_r7gVqiTEzFPblCqwafj8iDsGLeXZ6irJXcww"},"assets/arweave.9daa5074.js":{"id":"JPzs9tGfERZdwlwnMSz4q6bShJGJfzFzLCdDvsQaDqE"},"assets/arweave-wallet-connector.4da4094f.js":{"id":"kZHTLtadgqxnkfTMpK5LGEsfewHHhLEbkP63U83rw2c"}}}'
 
 const appContract = await arweave.createTransaction({ data: app })
@@ -117,3 +120,4 @@ const result = await fetch('https://gateway.redstone.finance/gateway/contracts/d
 }).then(res => res.ok ? res.json() : res)
 console.log(result)
 console.log(appContract.id)
+*/
